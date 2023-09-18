@@ -8,10 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="" type="text/css"/>
+    <link rel="stylesheet" href="../CSS/common.css" type="text/css"/>
 </head>
 <body>
-    <div class="container">
+    <div class="banner">
+        <div class="container"><h3>Guards</h3></div>
+    </div>
+    <div class="container mt-3"> 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="walkin-tab" data-bs-toggle="tab" data-bs-target="#walkin" type="button" role="tab" aria-controls="walkin" aria-selected="true">Walkin</button>
@@ -22,7 +25,7 @@
           </ul>
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active p-3" id="walkin" role="tabpanel" aria-labelledby="walkin-tab">
-                <div class="py-3"><h3>Registration Form - OCR autofill</h3></div>
+                <div class="pb-3"><h4>Registration Form - OCR autofill</h4></div>
                 <form action="/action_page.php" method="get">
                     <label for="vname">Name:</label>
                     <input type="text" id="vname" name="vname"><br><br>
@@ -54,11 +57,10 @@
                     </div>
                     <br>
                     <input type="submit" value="Submit">
-
                 </form>
             </div>
             <div class="tab-pane fade p-3" id="preregistered" role="tabpanel" aria-labelledby="preregistered-tab">
-                <h3>Scan Qr Code</h3>
+                <h4>Scan QR Code - Update DB</h4>
             </div>
           </div>
     </div>
