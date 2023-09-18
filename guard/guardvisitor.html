@@ -11,55 +11,56 @@
     <link rel="stylesheet" href="" type="text/css"/>
 </head>
 <body>
-    <div><h3>Visitor Request Form</h3></div>
-    <ul class="nav nav-tabs" id="myTab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">WalkIn</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Pre-registered</button>
-        </li>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="walkin-tab" data-bs-toggle="tab" data-bs-target="#walkin" type="button" role="tab" aria-controls="walkin" aria-selected="true">Walkin</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="preregistered-tab" data-bs-toggle="tab" data-bs-target="#preregistered" type="button" role="tab" aria-controls="preregistered" aria-selected="false">Pre-registered</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active p-3" id="walkin" role="tabpanel" aria-labelledby="walkin-tab">
+                <div class="py-3"><h3>Registration Form - OCR autofill</h3></div>
+                <form action="/action_page.php" method="get">
+                    <label for="vname">Name:</label>
+                    <input type="text" id="vname" name="vname"><br><br>
+                    <label for="vehicleNo">Vehicle No:</label>
+                    <input type="text" id="vehicleNo" name="vehicleNo"><br><br>
+                    <label for="unitNo">Unit No:</label>
+                    <input type="text" id="unitNo" name="unitNo"><br><br>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Visitor Category
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Visitor</a>
+                            <a class="dropdown-item" href="#">Delivery</a>
+                            <a class="dropdown-item" href="#">Contractor</a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Purpose of Visit
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Casual Visit</a>
+                            <a class="dropdown-item" href="#">Parcel Delivery</a>
+                            <a class="dropdown-item" href="#">Food Delivery</a>
+                            <a class="dropdown-item" href="#">Contractor</a>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="submit" value="Submit">
 
-    </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><h3>Scan QR Code</h3></div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            <h3>Scan QR Code</h3>
-            <form action="/action_page.php" method="get">
-                <label for="lname">Mode of Entry:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="lname">Name:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="fname">Vechicle No:</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                <label for="lname">Unit No:</label>
-                <input type="text" id="lname" name="lname"><br><br>
-                <label for="lname">Visitor Category:</label>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Visitor</a>
-                        <a class="dropdown-item" href="#">Delivery</a>
-                        <a class="dropdown-item" href="#">Contractor</a>
-                    </div>
-                </div>
-                <label for="lname">Purpose of Visit:</label>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Casual Visit</a>
-                        <a class="dropdown-item" href="#">Parcel</a>
-                        <a class="dropdown-item" href="#">Food</a>
-                        <a class="dropdown-item" href="#">Contractor</a>
-                    </div>
-                </div>
-                <input type="submit" value="Generate QR Code">
-            </form>
-        </div>
+                </form>
+            </div>
+            <div class="tab-pane fade p-3" id="preregistered" role="tabpanel" aria-labelledby="preregistered-tab">
+                <h3>Scan Qr Code</h3>
+            </div>
+          </div>
     </div>
 </body>
 </html>
