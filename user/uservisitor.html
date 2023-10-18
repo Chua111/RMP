@@ -14,15 +14,15 @@
     <div class="container p-4">
         <div><h3>Visitor Request Form</h3></div>
         <br>
-        <form action="/action_page.php" method="get">
+        <form>
             <label for="name">Name</label>
-            <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Wong Mun Tee">
+            <input type="" class="form-control" id="name" placeholder="Wong Mun Tee">
             <br>
             <label for="name">Vehicle No</label>
-            <input type="" class="form-control" id="exampleFormControlInput1" placeholder="BPK1234">
+            <input type="" class="form-control" id="vehicleno" placeholder="BPK1234">
             <br>
             <label for="name">Unit No:</label>
-            <input type="" class="form-control" id="exampleFormControlInput1" placeholder="A1-2">
+            <input type="" class="form-control" id="unitno" placeholder="A1-2">
             <br>
             <div>
                 <label for="exampleFormControlSelect1">Category</label>
@@ -43,17 +43,18 @@
                 </select>                
             </div>
             <br>
-            <button type="submit" class="btn btn-primary" onclick="generateQR()">Submit</button>
+            
         </form>
+        <button type="submit" class="btn btn-primary" onclick="generateQR()">Submit</button>
         <div class="pt-3" id="imgBox">
             <img src="" id="qrImage">
         </div>
     </div>
     <script>
         const date = new Date();
-        let vname = document.getElementById("vname");
-        let vehicleNo = document.getElementById("vehicleNo");
-        let unitNo = document.getElementById("unitNo");
+        let vname = document.getElementById("name");
+        let vehicleNo = document.getElementById("vehicleno");
+        let unitNo = document.getElementById("unitno");
  
         function generateQR(){
             qrImage.src =" https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + date + ";" + vname.value + ";" + vehicleNo.value + ";" + unitNo.value;

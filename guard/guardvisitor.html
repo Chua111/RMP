@@ -33,41 +33,41 @@
                     <button type="submit">Convert</button>
                 </form>
                 <br>
-                <form action="/action_page.php" method="get">
-                    <label for="vname">Name:</label>
-                    <input type="text" id="vname" name="vname"><br><br>
-                    <label for="vehicleNo">Vehicle No:</label>
-                    <input type="text" id="vehicleNo" name="vehicleNo"><br><br>
-                    <label for="unitNo">Unit No:</label>
-                    <input type="text" id="unitNo" name="unitNo"><br><br>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Visitor Category
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Visitor</a>
-                            <a class="dropdown-item" href="#">Delivery</a>
-                            <a class="dropdown-item" href="#">Contractor</a>
-                        </div>
+                <form action="/PHP/visitordb.php" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Wong Mun Tee">
+                    <br>
+                    <label for="name">Vehicle No</label>
+                    <input type="text" class="form-control" id="vehicleno" placeholder="BPK1234">
+                    <br>
+                    <label for="name">Unit No:</label>
+                    <input type="text" class="form-control" id="unitno" placeholder="A1-2">
+                    <br>
+                    <div>
+                        <label for="exampleFormControlSelect1">Category</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Visitor</option>
+                          <option>Delivery</option>
+                          <option>Contractor</option>
+                        </select>
                     </div>
                     <br>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Purpose of Visit
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Casual Visit</a>
-                            <a class="dropdown-item" href="#">Parcel Delivery</a>
-                            <a class="dropdown-item" href="#">Food Delivery</a>
-                            <a class="dropdown-item" href="#">Contractor</a>
-                        </div>
+                    <div>
+                        <label for="exampleFormControlSelect1">Purpose of Visit</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                          <option>Casual Visit</option>
+                          <option>Contractor</option>
+                          <option>Food Delivery</option>
+                          <option>Parcel Delivery</option>
+                        </select>                
                     </div>
                     <br>
-                    <input type="submit" value="Submit">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
             <div class="tab-pane fade p-3" id="preregistered" role="tabpanel" aria-labelledby="preregistered-tab">
                 <h4>Scan QR Code - Update DB</h4>
+                
             </div>
           </div>
     </div>
